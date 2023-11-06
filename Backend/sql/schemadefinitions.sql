@@ -1,105 +1,105 @@
 -- Athlete Table
 CREATE TABLE Athlete (
     AthleteID int PRIMARY KEY,
-    SportID varchar(50),
-    LftGroupID int,
-    RelationshipID int,
-    FirstName varchar(50),
-    LastName varchar(50),
-    PhoneNumber varchar(11),
-    Email varchar(50),
-    Username varchar(50),
-    Password varchar(50),
-    Class varchar(50)
+    SportID varchar(50) NOT NULL,
+    LiftGroupID int NOT NULL,
+    RelationshipID int NOT NULL,
+    FirstName varchar(50) NOT NULL,
+    LastName varchar(50) NOT NULL,,
+    PhoneNumber varchar(11) NOT NULL,
+    Email varchar(50) NOT NULL,
+    Username varchar(50) NOT NULL,
+    Password varchar(50) NOT NULL,
+    YearClass varchar(50) NOT NULL,
 );
 
 -- Coach Table
 CREATE TABLE Coach (
     CoachID int PRIMARY KEY,
-    SportID varchar(50),
-    FirstName varchar(50),
-    LastName varchar(50),
-    PhoneNumber varchar(11),
-    Email varchar(50),
-    Username varchar(50),
-    Password varchar(50)
+    SportID varchar(50) NOT NULL,
+    FirstName varchar(50) NOT NULL,
+    LastName varchar(50) NOT NULL,
+    PhoneNumber varchar(11) NOT NULL,
+    Email varchar(50) NOT NULL,
+    Username varchar(50) NOT NULL,
+    Password varchar(50) NOT NULL
 );
 
 -- AthleteCoach Relationship Table
 CREATE TABLE AthleteCoach (
     RelationshipID int PRIMARY KEY,
-    AthleteID int,
-    CoachID int
+    AthleteID int NOT NULL,
+    CoachID int NOT NULL
 );
 
 -- Sport Table
 CREATE TABLE Sport (
     SportID varchar(50) PRIMARY KEY,
-    AthleteID int,
-    Name varchar(50)
+    AthleteID int NOT NULL,
+    Name varchar(50) NOT NULL
 );
 
 -- LiftGroup Table
 CREATE TABLE LiftGroup (
-    LftGroupID int PRIMARY KEY,
-    SportID varchar(50)
+    LiftGroupID int PRIMARY KEY,
+    SportID varchar(50) NOT NULL
 );
 
 -- Workout Table
 CREATE TABLE Workout (
     WorkoutID int PRIMARY KEY,
-    SportID varchar(50),
-    Name varchar(50),
-    NumberOfWeeks int
+    SportID varchar(50) NOT NULL,
+    Name varchar(50) NOT NULL,
+    NumberOfWeeks int NOT NULL
 );
 
 -- Exercise Table
 CREATE TABLE Exercise (
     ExerciseID varchar(50) PRIMARY KEY,
-    WorkoutID int,
-    Name varchar(50),
-    Sets int,
-    Reps int,
+    WorkoutID int NOT NULL,
+    Name varchar(50) NOT NULL,
+    NumberSets int NOT NULL,
+    NumberReps int NOT NULL,
     NotesTempoPercentage varchar(MAX)
 );
 
 -- Session Table
-CREATE TABLE Session (
+CREATE TABLE WorkoutSession (
     SessionID varchar(50) PRIMARY KEY,
-    AthleteID int,
-    WorkoutID int,
-    Completion Boolean,
-    810Class Boolean,
-    Soreness int,
-    Difficulty int,
-    Notes varchar(MAX)
+    AthleteID int NOT NULL,
+    WorkoutID int NOT NULL,
+    Completion Boolean NOT NULL,
+    EarlyClass Boolean NOT NULL,
+    Soreness int NOT NULL,
+    Difficulty int NOT NULL,
+    SessionNotes varchar(MAX)
 );
 
 -- Goal Table
 CREATE TABLE Goal (
     GoalID int PRIMARY KEY,
-    AthleteID int,
-    ExerciseID int,
-    GoalReached Boolean,
+    AthleteID int NOT NULL,
+    ExerciseID int NOT NULL,
+    GoalReached Boolean NOT NULL,
     GoalNotes varchar(MAX)
 );
 
 -- Event Table
 CREATE TABLE Event (
     EventID varchar(50) PRIMARY KEY,
-    EventName varchar(MAX),
+    EventName varchar(255) NOT NULL,
     Date DATE
 );
 
 -- Attempt Table
 CREATE TABLE Attempt (
     AttemptID int PRIMARY KEY,
-    AthleteID int,
-    EventID int
+    AthleteID int NOT NULL,
+    EventID int NOT NULL
 );
 
 -- Leaderboard Table
 CREATE TABLE Leaderboard (
     LeaderboardID varchar(50) PRIMARY KEY,
-    AttemptID int
+    AttemptID int NOT NULL
 );
