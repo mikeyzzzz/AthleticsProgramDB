@@ -1,110 +1,120 @@
 -- Athlete Table
 CREATE TABLE Athlete (
-    AthleteID int ,
+    AthleteID int PRIMARY KEY,
     SportID varchar(50) NOT NULL,
     LiftGroupID int NOT NULL,
-    RelationshipID int NOT NULL,
+    RelationshipID int,
     FirstName varchar(50) NOT NULL,
-    LastName varchar(50) NOT NULL,,
-    PhoneNumber varchar(11) NOT NULL,
+    LastName varchar(50) NOT NULL,
+    PhoneNumber varchar(50) NOT NULL,
     Email varchar(50) NOT NULL,
     Username varchar(50) NOT NULL,
     Password varchar(50) NOT NULL,
-    YearClass varchar(50) NOT NULL,
-	primary key (AthleteID),
-	foreign key (SportID) references Sport,
-	foreign key (LiftGroupID) references LiftGroup,
-	foreign key (RelationshipID) references AthleteCoach
+    Class varchar(50) NOT NULL,
+    FOREIGN KEY (SportID) REFERENCES Sport(SportID),
+    FOREIGN KEY (LiftGroupID) REFERENCES LiftGroup(LiftGroupID),
+    FOREIGN KEY (RelationshipID) REFERENCES AthleteCoach(RelationshipID)
 );
 
 -- Coach Table
 CREATE TABLE Coach (
-    CoachID int ,
+    CoachID int PRIMARY KEY,
     SportID varchar(50) NOT NULL,
     FirstName varchar(50) NOT NULL,
     LastName varchar(50) NOT NULL,
-    PhoneNumber varchar(11) NOT NULL,
+    PhoneNumber varchar(50) NOT NULL,
     Email varchar(50) NOT NULL,
     Username varchar(50) NOT NULL,
-    Password varchar(50) NOT NULL
-	foreign key (SportID) references Sport
+    Password varchar(50) NOT NULL,
+    FOREIGN KEY (SportID) REFERENCES Sport(SportID)
 );
 
 -- AthleteCoach Relationship Table
 CREATE TABLE AthleteCoach (
-    RelationshipID int ,
+    RelationshipID int PRIMARY KEY,
     AthleteID int NOT NULL,
-    CoachID int NOT NULL
+    CoachID int NOT NULL,
+    FOREIGN KEY (AthleteID) REFERENCES Athlete(AthleteID),
+    FOREIGN KEY (CoachID) REFERENCES Coach(CoachID)
 );
 
 -- Sport Table
 CREATE TABLE Sport (
-    SportID varchar(50) ,
-    AthleteID int NOT NULL,
+    SportID varchar(50) PRIMARY KEY,
     Name varchar(50) NOT NULL
 );
 
 -- LiftGroup Table
 CREATE TABLE LiftGroup (
-    LiftGroupID int ,
-    SportID varchar(50) NOT NULL
+    LiftGroupID int PRIMARY KEY,
+    SportID varchar(50) NOT NULL,
+    FOREIGN KEY (SportID) REFERENCES Sport(SportID)
 );
 
 -- Workout Table
 CREATE TABLE Workout (
-    WorkoutID int ,
+    WorkoutID int PRIMARY KEY,
     SportID varchar(50) NOT NULL,
     Name varchar(50) NOT NULL,
-    NumberOfWeeks int NOT NULL
+    NumberOfWeeks int NOT NULL,
+    FOREIGN KEY (SportID) REFERENCES Sport(SportID)
 );
 
 -- Exercise Table
 CREATE TABLE Exercise (
-    ExerciseID varchar(50) ,
+    ExerciseID int PRIMARY KEY,
     WorkoutID int NOT NULL,
     Name varchar(50) NOT NULL,
-    NumberSets int NOT NULL,
-    NumberReps int NOT NULL,
-    NotesTempoPercentage varchar(MAX)
+    Sets int NOT NULL,
+    Reps int NOT NULL,
+    NotesTempoPercentage varchar(MAX),
+    FOREIGN KEY (WorkoutID) REFERENCES Workout(WorkoutID)
 );
 
 -- Session Table
-CREATE TABLE WorkoutSession (
-    SessionID varchar(50) ,
+CREATE TABLE Session (
+    SessionID int PRIMARY KEY,
     AthleteID int NOT NULL,
     WorkoutID int NOT NULL,
-    Completion Boolean NOT NULL,
-    EarlyClass Boolean NOT NULL,
+    Completion BOOLEAN NOT NULL,
+    EarlyClass BOOLEAN NOT NULL,
     Soreness int NOT NULL,
     Difficulty int NOT NULL,
-    SessionNotes varchar(MAX)
+    Notes varchar(MAX),
+    FOREIGN KEY (AthleteID) REFERENCES Athlete(AthleteID),
+    FOREIGN KEY (WorkoutID) REFERENCES Workout(WorkoutID)
 );
 
 -- Goal Table
 CREATE TABLE Goal (
-    GoalID int ,
+    GoalID int PRIMARY KEY,
     AthleteID int NOT NULL,
     ExerciseID int NOT NULL,
-    GoalReached Boolean NOT NULL,
-    GoalNotes varchar(MAX)
+    GoalReached BOOLEAN NOT NULL,
+    GoalNotes varchar(MAX),
+    FOREIGN KEY (AthleteID) REFERENCES Athlete(AthleteID),
+    FOREIGN KEY (ExerciseID) REFERENCES Exercise(ExerciseID)
 );
 
 -- Event Table
 CREATE TABLE Event (
-    EventID varchar(50) ,
+    EventID int PRIMARY KEY,
     EventName varchar(255) NOT NULL,
     Date DATE NOT NULL
 );
 
 -- Attempt Table
 CREATE TABLE Attempt (
-    AttemptID int ,
+    AttemptID int PRIMARY KEY,
     AthleteID int NOT NULL,
-    EventID int NOT NULL
+    EventID int NOT NULL,
+    FOREIGN KEY (AthleteID) REFERENCES Athlete(AthleteID),
+    FOREIGN KEY (EventID) REFERENCES Event(EventID)
 );
 
 -- Leaderboard Table
 CREATE TABLE Leaderboard (
-    LeaderboardID varchar(50) ,
-    AttemptID int NOT NULL
+    LeaderboardID int PRIMARY KEY,
+    AttemptID int NOT NULL,
+    FOREIGN KEY (AttemptID) REFERENCES Attempt(AttemptID)
 );
