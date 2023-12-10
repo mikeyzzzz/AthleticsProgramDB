@@ -35,8 +35,8 @@
 <body>
 
 <div class="form-container">
-    <form id="form" action="login-verify.php" onsubmit="isValid()" method="POST"> 
-        <h1> Athlete Login </h1>
+    <form id="form" action="coach-login-verify.php" onsubmit="isValid()" method="POST"> 
+        <h1> Coach Login </h1>
 
 		<div class="form-group">
 			Username: <input type="text" name="username" id="username"><br>
@@ -47,11 +47,10 @@
 		</div>
 
         <div class="form-group">
-            <input type="submit" value="Login" name="loginSubmit">
+            <input type="submit" value="Login" name="coachLoginSubmit">
         </div>
 
-        <a href="register.php"><h6>Don't have an account? Register here</h6></a>
-		<a href="coach-login.php"><h6>Are you a coach? Login here</h6></a>
+		<a href="login.php"><h6>Are you an athlete? Login here</h6></a>
 
 		
 		

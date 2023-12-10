@@ -1,210 +1,182 @@
---Create sports/initialize
+-- Swimming & Diving
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(2, 'Swimming & Diving', NULL, 'Michael', 'Phelps', '2345678901', 'michael.phelps@example.com', 'Senior', 'mphelps', 'password', '6 feet 4 inches', '190', 'Sports Management', 'Butterfly', 'Sushi', 'EDM', 'Swimming, Golf');
 
-INSERT INTO Sport (SportID) VALUES ('Swimming and Diving');
-INSERT INTO Sport (SportID) VALUES ('Basketball');
-INSERT INTO Sport (SportID) VALUES ('Track & Field');
-INSERT INTO Sport (SportID) VALUES ('Football');
+-- Football
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(102, 'Football', NULL, 'Tom', 'Brady', '3456789012', 'tom.brady@example.com', '5+', 'tbrady', 'password', '6 feet 4 inches', '225', 'Business Administration', 'Quarterback', 'Avocado Toast', 'Classic Rock', 'Football, Yoga');
 
---Create athletes/register (did not select sport, coach, or lift group yet)
+-- Basketball
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(202, 'Basketball', NULL, 'LeBron', 'James', '4567890123', 'lebron.james@example.com', '5+', 'ljames', 'password', '6 feet 9 inches', '250', 'Sports Management', 'Small Forward', 'Tacos', 'Hip Hop', 'Basketball, Activism');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70550531, NULL, NULL, 'Lauder', 'Sound', '2038354566', 'soundl9@example.com', 'swimmer123', 'drown123', 'Junior');
+-- Baseball
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(302, 'Baseball', NULL, 'Mike', 'Trout', '5678901234', 'mike.trout@example.com', '5+', 'mtrout', 'password', '6 feet 2 inches', '215', 'Kinesiology', 'Center Fielder', 'Pizza', 'Country', 'Baseball, Fishing');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70550426, NULL, NULL, 'Kason', 'Razor', '2033649121', 'razork8@example.com', 'baller123', 'swish123', 'Junior');
+-- Lacrosse
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(402, 'Lacrosse', NULL, 'Megan', 'Douty', '6789012345', 'megan.douty@example.com', 'Junior', 'mdouty', 'password', '5 feet 4 inches', '140', 'Psychology', 'Defense', 'Sushi', 'Pop', 'Lacrosse, Travel');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70550295, NULL, NULL, 'Tripper', 'John', '2032925594', 'johnt2@example.com', 'runner123', 'sprint123', 'Senior');
+-- Gymnastics
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(502, 'Gymnastics', NULL, 'Simone', 'Biles', '7890123456', 'simone.biles@example.com', '5+', 'sbiles', 'password', '4 feet 8 inches', '105', 'Psychology', 'All-Around', 'Ice Cream', 'Pop', 'Gymnastics, Reading');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70550773, NULL, NULL, 'Dirty', 'Dan', '2036662233', 'dand0@example.com', 'dirtyd123', 'footballz', 'Freshman');
+-- Cross Country
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(602, 'Cross Country', NULL, 'Eliud', 'Kipchoge', '8901234567', 'eliud.kipchoge@example.com', '5+', 'ekipchoge', 'password', '5 feet 6 inches', '115', 'Physics', 'Marathon Runner', 'Pasta', 'Reggae', 'Running, Meditation');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70550888, NULL, NULL, 'Smith', 'John', '2031112222', 'johnsmith@example.com', 'swimj123', 'pass123', 'Sophomore');
+-- Track & Field
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(702, 'Track & Field', NULL, 'Usain', 'Bolt', '9012345678', 'usain.bolt@example.com', '5+', 'ubolt', 'password', '6 feet 5 inches', '207', 'Sports Science', 'Sprinter', 'Jerk Chicken', 'Reggae', 'Track & Field, DJing');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70550999, NULL, NULL, 'Johnson', 'Emily', '2033334444', 'emilyjohnson@example.com', 'bball_emily', 'password123', 'Junior');
+-- Volleyball
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(802, 'Volleyball', NULL, 'Gabrielle', 'Reece', '0123456789', 'gabrielle.reece@example.com', '5+', 'greece', 'password', '6 feet 3 inches', '160', 'Communications', 'Outside Hitter', 'Sushi', 'Rock', 'Volleyball, Surfing');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass)
-VALUES (70551010, NULL, NULL, 'Davis', 'Michael', '2035556666', 'michaeldavis@example.com', 'trackmike', 'securepass', 'Senior');
+-- Swimming & Diving
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(3, 'Swimming & Diving', NULL, 'Katie', 'Ledecky', '2345678902', 'katie.ledecky@example.com', 'Senior', 'kledecky', 'password', '5 feet 11 inches', '160', 'Political Science', 'Freestyle', 'Pizza', 'Pop', 'Swimming, Reading'),
+-- Add more athletes for Swimming & Diving
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70551111, NULL, NULL, 'Wilson', 'Sarah', '2037778888', 'sarahwilson@example.com', 'football_sarah', 'paz12478', '5+');
+-- Football
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(103, 'Football', NULL, 'Patrick', 'Mahomes', '3456789013', 'patrick.mahomes@example.com', '5+', 'pmahomes', 'password', '6 feet 3 inches', '230', 'Communication Studies', 'Quarterback', 'BBQ Ribs', 'Country', 'Football, Video Games'),
+-- Add more athletes for Football
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70551222, NULL, NULL, 'Brown', 'David', '2039990000', 'davidbrown@example.com', 'swim_david', 'wordd123', 'Freshman');
+-- Basketball
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(203, 'Basketball', NULL, 'Stephen', 'Curry', '4567890124', 'stephen.curry@example.com', '5+', 'scurry', 'password', '6 feet 3 inches', '185', 'Sociology', 'Point Guard', 'Chicken Curry', 'Hip Hop', 'Basketball, Golf'),
+-- Add more athletes for Basketball
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70551333, NULL, NULL, 'Taylor', 'Olivia', '2031112222', 'oliviataylor@example.com', 'bball_olivia', '123go!', 'Sophomore');
+-- Baseball
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(303, 'Baseball', NULL, 'Aaron', 'Judge', '5678901235', 'aaron.judge@example.com', '5+', 'ajudge', 'password', '6 feet 7 inches', '282', 'Business', 'Right Fielder', 'Steak', 'Country', 'Baseball, Cooking');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70551444, NULL, NULL, 'Miller', 'Daniel', '2033334444', 'danielmiller@example.com', 'track_daniel', 'runners50', 'Junior');
+-- Lacrosse
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(403, 'Lacrosse', NULL, 'Paul', 'Rabil', '6789012346', 'paul.rabil@example.com', 'Senior', 'prabil', 'password', '6 feet 3 inches', '220', 'Finance', 'Attack', 'Burgers', 'Rock', 'Lacrosse, Podcasts');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass) 
-VALUES (70551555, NULL, NULL, 'Anderson', 'Sophia', '2035556666', 'sophiaanderson@example.com', 'football_sophia', 'boot89l', 'Senior');
+-- Gymnastics
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(503, 'Gymnastics', NULL, 'Aly', 'Raisman', '7890123457', 'aly.raisman@example.com', '5+', 'araisman', 'password', '5 feet 2 inches', '115', 'Psychology', 'Floor Exercise', 'Pasta', 'Pop', 'Gymnastics, Advocacy');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass)
-VALUES (70559666, NULL, NULL, 'Lee', 'Ethan', '2037778888', 'ethanlee@example.com', 'swim_ethan', 'torpedoE', '5+');
+-- Cross Country
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(603, 'Cross Country', NULL, 'Mo', 'Farah', '8901234568', 'mo.farah@example.com', '5+', 'mofarah', 'password', '5 feet 9 inches', '130', 'Nutrition', 'Long Distance Runner', 'Fish and Chips', 'Reggae', 'Running, Travel');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass)
-VALUES (70558777, NULL, NULL, 'Harris', 'Ava', '2039990000', 'avaharris@example.com', 'bball_ava', 'aver356', 'Freshman');
+-- Track & Field
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(703, 'Track & Field', NULL, 'Allyson', 'Felix', '9012345679', 'allyson.felix@example.com', '5+', 'afelix', 'password', '5 feet 6 inches', '125', 'Elementary Education', 'Sprinter', 'Fried Chicken', 'R&B', 'Track & Field, Community Service');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass)
-VALUES (70554888, NULL, NULL, 'Clark', 'Noah', '2031112222', 'noahclark@example.com', 'track_noah', 'noher345', 'Sophomore');
+-- Volleyball
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(803, 'Volleyball', NULL, 'Phil', 'Dalhausser', '0123456780', 'phil.dalhausser@example.com', '5+', 'pdalhausser', 'password', '6 feet 9 inches', '200', 'History', 'Middle Blocker', 'BBQ', 'Rock', 'Volleyball, Beach Volleyball');
 
-INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, Username, Password, YearClass)
-VALUES (70558999, NULL, NULL, 'Lewis', 'Mia', '2033334444', 'mialewis@example.com', 'football_mia', 'miaplanez', 'Junior');
+-- Swimming & Diving
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(13, 'Swimming & Diving', NULL, 'Michael', 'Phelps', '2345678902', 'michael.phelps@example.com', '5+', 'mphelps', 'password', '6 feet 4 inches', '185', 'Sports Management', 'Butterfly', 'Sushi', 'Hip Hop', 'Swimming, Golf'),
 
+-- Football
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(113, 'Football', NULL, 'Tom', 'Brady', '3456789013', 'tom.brady@example.com', '5+', 'tbrady', 'password', '6 feet 4 inches', '225', 'Business Administration', 'Quarterback', 'Avocado Ice Cream', 'Classic Rock', 'Football, Yoga'),
 
---Create coaches/register (did not select sport yet) 
+-- Basketball
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(213, 'Basketball', NULL, 'LeBron', 'James', '4567890124', 'lebron.james@example.com', '5+', 'ljames', 'password', '6 feet 9 inches', '250', 'Business Administration', 'Small Forward', 'Tacos', 'Hip Hop', 'Basketball, Philanthropy'),
 
-INSERT INTO Coach (CoachID, SportID, FirstName, LastName, PhoneNumber, Email, Username, Password)
-VALUES (70668903, NULL, 'Tim', 'Quanty', '2347858999', 'timquanty345@example.com', 'tqGod', 't30allday');
+-- Baseball
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(313, 'Baseball', NULL, 'Bryce', 'Harper', '5678901235', 'bryce.harper@example.com', '5+', 'bharper', 'password', '6 feet 3 inches', '230', 'Communication', 'Right Fielder', 'Cheesesteaks', 'Country', 'Baseball, Fishing');
 
-INSERT INTO Coach (CoachID, SportID, FirstName, LastName, PhoneNumber, Email, Username, Password)
-VALUES (70668223, NULL, 'Chris', 'Morner', '2347858299', 'mornerCH5@example.com', 'cjyurrr', 'haybarn123');
+-- Lacrosse
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(413, 'Lacrosse', NULL, 'Taylor', 'Thornton', '6789012346', 'taylor.thornton@example.com', '5+', 'tthornton', 'password', '5 feet 8 inches', '170', 'Marketing', 'Midfielder', 'Sushi', 'Pop', 'Lacrosse, Photography');
 
-INSERT INTO Coach (CoachID, SportID, FirstName, LastName, PhoneNumber, Email, Username, Password)
-VALUES (12345678, NULL, 'Sarah', 'Johnson', '9876543210', 'sarahj@example.com', 'trackstar77', 'runfast12');
+-- Gymnastics
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(513, 'Gymnastics', NULL, 'Simone', 'Biles', '7890123457', 'simone.biles@example.com', '5+', 'sbiles', 'password', '4 feet 8 inches', '104', 'Psychology', 'All-Around', 'Pizza', 'Pop', 'Gymnastics, Dancing');
 
-INSERT INTO Coach (CoachID, SportID, FirstName, LastName, PhoneNumber, Email, Username, Password)
-VALUES (87654321, NULL, 'Michael', 'Davis', '0123456789', 'michaeld@example.com', 'mdtrack19', 'speeddemon22');
+-- Cross Country
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(613, 'Cross Country', NULL, 'Eliud', 'Kipchoge', '8901234568', 'eliud.kipchoge@example.com', '5+', 'ekipchoge', 'password', '5 feet 6 inches', '125', 'Sports Science', 'Long Distance Runner', 'Pasta', 'Reggae', 'Running, Reading');
 
-INSERT INTO Coach (CoachID, SportID, FirstName, LastName, PhoneNumber, Email, Username, Password)
-VALUES (98765432, NULL, 'Rachel', 'Smith', '9876543210', 'rachels@example.com', 'hoopsqueen10', 'baller1234');
+-- Track & Field
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(713, 'Track & Field', NULL, 'Usain', 'Bolt', '9012345679', 'usain.bolt@example.com', '5+', 'ubolt', 'password', '6 feet 5 inches', '207', 'Physics', 'Sprinter', 'Jamaican Jerk Chicken', 'Reggae', 'Track & Field, Travel');
 
-INSERT INTO Coach (CoachID, SportID, FirstName, LastName, PhoneNumber, Email, Username, Password)
-VALUES (23456789, NULL, 'Mark', 'Wilson', '0123456789', 'markw@example.com', 'mwbasket23', 'bballcoach32');
+-- Volleyball
+INSERT INTO Athlete (AthleteID, SportID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(813, 'Volleyball', NULL, 'Gabrielle', 'Reece', '0123456780', 'gabrielle.reece@example.com', '5+', 'greece', 'password', '6 feet 3 inches', '160', 'Communications', 'Outside Hitter', 'Acai Bowls', 'Pop', 'Volleyball, Beach Volleyball');
 
-INSERT INTO Coach (CoachID, SportID, FirstName, LastName, PhoneNumber, Email, Username, Password)
-VALUES (34567890, NULL, 'Brandon', 'Taylor', '9876543210', 'brandont@example.com', 'btcoach34', 'touchdown999');
+-- Swimming & Diving
+INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(10001, 'Swimming & Diving', NULL, 'Alex', 'Morgan', '1234567890', 'alex.morgan@example.com', 'Junior', 'amorgan', 'password', '5 feet 10 inches', '155', 'Biology', 'Butterfly', 'Smoothie Bowl', 'Pop', 'Swimming, Photography'),
 
-INSERT INTO Coach (CoachID, SportID, FirstName, LastName, PhoneNumber, Email, Username, Password)
-VALUES (89012345, NULL, 'Emily', 'Miller', '0123456789', 'emilym@example.com', 'coolemily', 'goblue22');
+-- Football
+INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(10002, 'Football', NULL, 'Jordan', 'Bryant', '2345678901', 'jordan.bryant@example.com', 'Junior', 'jbryant', 'password', '6 feet 4 inches', '220', 'Sports Management', 'Wide Receiver', 'BBQ Ribs', 'Hip Hop', 'Football, Video Games'),
 
+-- Basketball
+INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(10003, 'Basketball', NULL, 'Taylor', 'Johnson', '3456789012', 'taylor.johnson@example.com', 'Senior', 'tjohnson', 'password', '6 feet 1 inch', '200', 'Marketing', 'Power Forward', 'Tacos', 'R&B', 'Basketball, Travel'),
 
---Coach picks the sport that they coach 
+-- Baseball
+INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(10004, 'Baseball', NULL, 'Ryan', 'Garcia', '4567890123', 'ryan.garcia@example.com', 'Senior', 'rgarcia', 'password', '6 feet 3 inches', '210', 'Finance', 'Pitcher', 'Pizza', 'Country', 'Baseball, Fishing');
 
-UPDATE Coach SET SportID = 'Swimming and Diving' WHERE CoachID = 70668903;
-UPDATE Coach SET SportID = 'Swimming and Diving' WHERE CoachID = 70668223;
+-- Lacrosse
+INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(10005, 'Lacrosse', NULL, 'Sydney', 'Taylor', '5678901234', 'sydney.taylor@example.com', 'Senior', 'staylor', 'password', '5 feet 5 inches', '140', 'Psychology', 'Midfielder', 'Salad', 'Pop', 'Lacrosse, Hiking');
 
-UPDATE Coach SET SportID = 'Basketball' WHERE CoachID = 12345678;
-UPDATE Coach SET SportID = 'Basketball' WHERE CoachID = 87654321;
+-- Gymnastics
+INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(10006, 'Gymnastics', NULL, 'Evan', 'White', '6789012345', 'evan.white@example.com', 'Senior', 'ewhite', 'password', '5 feet 8 inches', '150', 'Psychology', 'Floor Exercise', 'Sushi', 'Rock', 'Gymnastics, Painting');
 
-UPDATE Coach SET SportID = 'Track & Field' WHERE CoachID = 98765432;
-UPDATE Coach SET SportID = 'Track & Field' WHERE CoachID = 23456789;
+-- Cross Country
+INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(10007, 'Cross Country', NULL, 'Emma', 'Watson', '7890123456', 'emma.watson@example.com', '5+', 'ewatson', 'password', '5 feet 7 inches', '130', 'English Literature', 'Long Distance Runner', 'Pasta', 'Classical', 'Running, Reading');
 
-UPDATE Coach SET SportID = 'Football' WHERE CoachID = 34567890;
-UPDATE Coach SET SportID = 'Football' WHERE CoachID = 89012345;
+-- Track & Field
+INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(10008, 'Track & Field', NULL, 'Aaron', 'Smith', '8901234567', 'aaron.smith@example.com', '5+', 'asmith', 'password', '6 feet 2 inches', '180', 'Mechanical Engineering', 'High Jumper', 'Burger', 'Pop', 'Track & Field, Coding');
 
---Athlete picks the sport that they do 
-
-UPDATE Athlete SET SportID = 'Swimming and Diving' WHERE AthleteID = 70550531;
-UPDATE Athlete SET SportID = 'Basketball' WHERE AthleteID = 70550426;
-UPDATE Athlete SET SportID = 'Track & Field' WHERE AthleteID = 70550295;
-UPDATE Athlete SET SportID = 'Football' WHERE AthleteID = 70550773;
-
-UPDATE Athlete SET SportID = 'Swimming and Diving' WHERE AthleteID = 70550888;
-UPDATE Athlete SET SportID = 'Basketball' WHERE AthleteID = 70550999;
-UPDATE Athlete SET SportID = 'Track & Field' WHERE AthleteID = 70551010;
-UPDATE Athlete SET SportID = 'Football' WHERE AthleteID = 70551111;
-
-UPDATE Athlete SET SportID = 'Swimming and Diving' WHERE AthleteID = 70551222;
-UPDATE Athlete SET SportID = 'Basketball' WHERE AthleteID = 70551333;
-UPDATE Athlete SET SportID = 'Track & Field' WHERE AthleteID = 70551444;
-UPDATE Athlete SET SportID = 'Football' WHERE AthleteID = 70551555;
-
-UPDATE Athlete SET SportID = 'Swimming and Diving' WHERE AthleteID = 70559666;
-UPDATE Athlete SET SportID = 'Basketball' WHERE AthleteID = 70558777;
-UPDATE Athlete SET SportID = 'Track & Field' WHERE AthleteID = 70554888;
-UPDATE Athlete SET SportID = 'Football' WHERE AthleteID = 70558999;
-
-
---After picking sport, the athlete chooses who their coaches are to establish a relationship
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (1,70550531,70668903);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (2,70550531,70668223);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (3,70550426,98765432);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (4,70550426,23456789);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (5,70550295,12345678);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (6,70550295,87654321);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (7,70550773,34567890);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (8,70550773,89012345);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (9,70550888,70668903);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (10,70550888,70668223);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (11,70550999,98765432);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (12,70550999,23456789);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (13,70551010,12345678);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (14,70551010,87654321);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (15,70551111,34567890);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (16,70551111,89012345);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (17,70551222,70668903);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (18,70551222,70668223);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (19,70551333,98765432);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (20,70551333,23456789);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (21,70551444,12345678);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (22,70551444,87654321);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (23,70551555,34567890);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (24,70551555,89012345);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (25,70559666,70668903);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (26,70559666,70668223);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (27,70558777,98765432);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (28,70558777,23456789);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (29,70554888,12345678);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (30,70554888,87654321);
-
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (31,70558999,34567890);
-INSERT INTO AthleteCoach(RelationshipID, AthleteID, CoachID)
-Values (32,70558999,89012345);
-
-
---ADMIN
-
-INSERT INTO Administrator(Username, Password)
-Values ("admin","admin123");
-
+-- Volleyball
+INSERT INTO Athlete (AthleteID, SportID, LiftGroupID, FirstName, LastName, PhoneNumber, Email, ClassYear, Username, Password, Height, Weight, Major, EventsOrPosition, FavoriteFood, FavoriteMusicArtist, Hobbies)
+VALUES
+(10009, 'Volleyball', NULL, 'Ashley', 'Miller', '0123456789', 'ashley.miller@example.com', '5+', 'amiller', 'password', '6 feet 0 inches', '175', 'Communications', 'Outside Hitter', 'Ice Cream', 'Country', 'Volleyball, Beach Volleyball');

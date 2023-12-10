@@ -10,9 +10,9 @@ CREATE TABLE Athlete (
 	ClassYear varchar(50) NOT NULL,
     Username varchar(50) NOT NULL,
     Password varchar(50) NOT NULL,
-	Height varchar(10) NULL,
+	Height varchar(20) NULL,
 	Weight varchar(10) NULL,
-	Major varchar(10) NULL,
+	Major varchar(30) NULL,
 	EventsOrPosition varchar(100) NULL,
 	FavoriteFood varchar(50) NULL,
 	FavoriteMusicArtist varchar(50) NULL,
@@ -52,8 +52,8 @@ CREATE TABLE Sport (
 
 -- LiftGroup Table
 CREATE TABLE LiftGroup (
-    LiftGroupID int ,
-    SportID varchar(50) NOT NULL
+    LiftGroupID INT AUTO_INCREMENT PRIMARY KEY,
+    SportID VARCHAR(50) NOT NULL
 );
 
 -- Workout Table

@@ -147,7 +147,7 @@
         <div class="profile-section editable-section">
             <h2>Edit Profile</h2>
 			<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-				<label for="height">Height (Feet'Inches''):</label>
+				<label for="height">Height (x Feet x Inches - Dont use ' or "):</label>
 				<input type="text" id="height" name="height" value="<?php echo $height; ?>">
 
 				<label for="weight">Weight (lbs):</label>

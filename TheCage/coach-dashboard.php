@@ -1,8 +1,9 @@
 <?php
     session_start();
+	include("db_connection.php");
 
     if (!isset($_SESSION['username']) || !isset($_SESSION['password'])) {
-        header("Location: admin-login.php"); // Redirect to the login page if not logged in
+        header("Location: coach-login.php"); // Redirect to the login page if not logged in
         exit();
     }
 
@@ -33,7 +34,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 100px;
+            width: 75px;
             height: 50px;
             border: 2px solid black;
             margin: 10px;
@@ -54,29 +55,31 @@
 <body>
 
     <div class="container">
-        <h1>Admin Dashboard </h1>
-        
-        <div class="box" onclick="selectBox('athletes')">Athletes</div>
-		<div class="box" onclick="selectBox('coaches')">Coaches</div>
-		<div class="box" onclick="selectBox('teams')">Teams</div>
+        <h1>TheCage Dashboard </h1>
+		<h4> <?php echo $username ?> </h4>
+
+        <div class="box" onclick="selectBox('profile')">Profile</div>
+        <div class="box" onclick="selectBox('myteam')">My Team</div>
         <div class="box" onclick="selectBox('liftgroups')">Lift Groups</div>
-		<div class="box" onclick="selectBox('excercises')">Excercises</div>
-        <div class="box" onclick="selectBox('workouts')">Workouts</div>
-		<div class="box" onclick="selectBox('events')">Events</div>
-        <div class="box" onclick="selectBox('leaderboards')">Leaderboards</div>
+        <div class="box" onclick="selectBox('stats')">Stats</div>
+        <div class="box" onclick="selectBox('cage')">Cage</div>
         <div class="box" onclick="selectBox('logout')">Logout</div>
         
 
         <script>
             function selectBox(box) 
 			{
-				if (box === "athletes")
+				if (box === "profile")
 				{
-					window.location.href = 'admin-athletes.php';
+					window.location.href = 'coach-profile.php';
 				}
-				if (box === "coaches")
+				if (box === "myteam")
 				{
-					window.location.href = 'admin-coaches.php';
+					window.location.href = 'coach-myteam.php';
+				}
+				if (box === "liftgroups")
+				{
+					window.location.href = 'coach-liftgroups.php';
 				}
 				if (box === "logout")
 				{
