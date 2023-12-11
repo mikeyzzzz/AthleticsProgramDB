@@ -81,6 +81,14 @@
 				{
 					window.location.href = 'coach-liftgroups.php';
 				}
+				if (box === "cage")
+				{
+					window.location.href = 'coach-cage.php';
+				}
+				if (box === "stats")
+				{
+					window.location.href = 'coach-stats.php';
+				}
 				if (box === "logout")
 				{
 					window.location.href = 'logout.php';

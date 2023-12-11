@@ -63,7 +63,7 @@
 		<div class="box" onclick="selectBox('excercises')">Excercises</div>
         <div class="box" onclick="selectBox('workouts')">Workouts</div>
 		<div class="box" onclick="selectBox('events')">Events</div>
-        <div class="box" onclick="selectBox('leaderboards')">Leaderboards</div>
+        <div class="box" onclick="selectBox('cage')">Cage</div>
         <div class="box" onclick="selectBox('logout')">Logout</div>
         
 
@@ -77,6 +77,30 @@
 				if (box === "coaches")
 				{
 					window.location.href = 'admin-coaches.php';
+				}
+				if (box === "teams")
+				{
+					window.location.href = 'admin-teams.php';
+				}
+				if (box === "liftgroups")
+				{
+					window.location.href = 'admin-liftgroups.php';
+				}
+				if (box === "excercises")
+				{
+					window.location.href = 'admin-excercises.php';
+				}
+				if (box === "workouts")
+				{
+					window.location.href = 'admin-workouts.php';
+				}
+				if (box === "events")
+				{
+					window.location.href = 'admin-events.php';
+				}
+				if (box === "cage")
+				{
+					window.location.href = 'admin-cage.php';
 				}
 				if (box === "logout")
 				{

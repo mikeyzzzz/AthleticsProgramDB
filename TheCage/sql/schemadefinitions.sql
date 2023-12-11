@@ -74,45 +74,54 @@ CREATE TABLE Exercise (
     NotesTempoPercentage varchar(MAX)
 );
 
+CREATE TABLE WorkoutExercise (
+    WorkoutID INT,
+    ExerciseID INT
+);
+
 -- Session Table
 CREATE TABLE WorkoutSession (
-    SessionID varchar(50) ,
+    SessionID INT AUTO_INCREMENT PRIMARY KEY,
     AthleteID int NOT NULL,
     WorkoutID int NOT NULL,
     Completion Boolean NOT NULL,
     EarlyClass Boolean NOT NULL,
     Soreness int NOT NULL,
     Difficulty int NOT NULL,
-    SessionNotes varchar(MAX)
+    SessionNotes varchar(255)
 );
 
 -- Goal Table
 CREATE TABLE Goal (
     GoalID int ,
     AthleteID int NOT NULL,
-    ExerciseID int NOT NULL,
+    ExerciseID int NULL,
     GoalReached Boolean NOT NULL,
     GoalNotes varchar(MAX)
 );
 
 -- Event Table
+-- Create Event Table
 CREATE TABLE Event (
-    EventID varchar(50) ,
-    EventName varchar(255) NOT NULL,
+    EventID INT AUTO_INCREMENT PRIMARY KEY,
+    EventName VARCHAR(255) NOT NULL,
     Date DATE NOT NULL
 );
 
--- Attempt Table
+
+-- Create Attempt Table
 CREATE TABLE Attempt (
-    AttemptID int ,
-    AthleteID int NOT NULL,
-    EventID int NOT NULL
+    AttemptID INT AUTO_INCREMENT PRIMARY KEY,
+    AthleteID INT NOT NULL,
+    EventID INT NOT NULL,
+    RecordInput VARCHAR(255),
+    Verified BOOLEAN
 );
 
--- Leaderboard Table
+-- Create Leaderboard Table
 CREATE TABLE Leaderboard (
-    LeaderboardID varchar(50) ,
-    AttemptID int NOT NULL
+    LeaderboardID INT AUTO_INCREMENT PRIMARY KEY,
+    EventID INT NOT NULL
 );
 
 

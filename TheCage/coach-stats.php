@@ -70,6 +70,16 @@
         h1 {
             text-align: center;
         }
+
+        .view-sessions-btn {
+            background-color: #008CBA;
+            color: white;
+            padding: 5px 10px; /* Adjust the padding to make the button smaller */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none; /* Remove underline from the link */
+        }
     </style>
 </head>
 
@@ -89,6 +99,7 @@
             echo '<th>Main Events</th>';
             echo '<th>Email</th>';
             echo '<th>Phone Number</th>';
+            echo '<th>View Sessions</th>'; // New column
             echo '</tr>';
 
             // Display the roster
@@ -100,6 +111,7 @@
                 echo '<td>' . $row['EventsOrPosition'] . '</td>';
                 echo '<td>' . $row['Email'] . '</td>';
                 echo '<td>' . $row['PhoneNumber'] . '</td>';
+                echo '<td><a href="coach-viewathletesessions.php?athleteID=' . $row['AthleteID'] . '" class="view-sessions-btn">Sessions</a></td>';
                 echo '</tr>';
             }
 

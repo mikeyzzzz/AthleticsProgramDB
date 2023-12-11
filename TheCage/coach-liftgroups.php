@@ -68,7 +68,7 @@ if (isset($_POST['deleteGroup'])) {
         }
 
         .container {
-            width: 80%;
+            width: 30%;
             margin: auto;
             text-align: center;
             border: 2px solid black;
@@ -95,10 +95,10 @@ if (isset($_POST['deleteGroup'])) {
             color: #333;
         }
 
-        .form-section {
+       .form-section {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: center; /* Center the form section */
             margin-top: 20px;
         }
 
@@ -106,16 +106,18 @@ if (isset($_POST['deleteGroup'])) {
         .form-section select {
             flex: 0 0 48%;
             margin-bottom: 10px;
+            text-align: left; /* Align the text to the left */
         }
 
         .table-section {
             width: 100%;
             margin-top: 20px;
             text-align: center; /* Center the table */
+			border: none;
         }
 
         .table-section table {
-            width: 80%; /* Adjust the width as needed */
+            width: 70%; /* Adjust the width as needed */
             border-collapse: collapse;
             margin: auto; /* Center the table */
         }

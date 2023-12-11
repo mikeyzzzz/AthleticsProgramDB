@@ -74,23 +74,13 @@ if (!$row) {
         }
 
         .profile-section {
-            margin-bottom: 20px;
+            position: relative;
         }
 
-        .uneditable-field {
-            background-color: #f5f5f5;
-            padding: 8px;
-            margin-bottom: 10px;
-        }
-
-        .editable-section input,
-        .editable-section textarea {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-        }
-
-        .save-btn {
+        .profile-section .back-btn-to-profile {
+            position: absolute;
+            top: 10px;
+            left: 10px;
             background-color: #4caf50;
             color: white;
             padding: 10px 15px;
@@ -99,21 +89,19 @@ if (!$row) {
             cursor: pointer;
         }
 
-        .height-inputs {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
+        .uneditable-field {
+            background-color: #f5f5f5;
+            padding: 8px;
+            margin-bottom: 10px;
         }
 
-        .height-inputs input {
-            width: 48%; /* Adjust as needed */
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="admin-dashboard.php" class="back-btn-to-dashboard">Dashboard</a>
         <div class="profile-section">
+		  <a href="admin-coaches.php" class="back-btn-to-coach">Back</a> <!-- Moved inside the profile box -->
             <h2>Coach Information</h2>
             <div class="uneditable-field"><strong>Name:</strong> <?php echo $name; ?></div>
             <div class="uneditable-field"><strong>Phone:</strong> <?php echo $phone; ?></div>

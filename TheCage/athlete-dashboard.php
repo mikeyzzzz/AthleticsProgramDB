@@ -60,7 +60,6 @@
         <div class="box" onclick="selectBox('profile')">Profile</div>
         <div class="box" onclick="selectBox('goals')">Goals</div>
         <div class="box" onclick="selectBox('workout')">Workout</div>
-        <div class="box" onclick="selectBox('stats')">Stats</div>
         <div class="box" onclick="selectBox('cage')">Cage</div>
         <div class="box" onclick="selectBox('logout')">Logout</div>
         
@@ -71,6 +70,18 @@
 				if (box === "profile")
 				{
 					window.location.href = 'athlete-profile.php';
+				}
+				if (box === "goals")
+				{
+					window.location.href = 'athlete-goals.php';
+				}
+				if (box === "workout")
+				{
+					window.location.href = 'athlete-workouts.php';
+				}
+				if (box === "cage")
+				{
+					window.location.href = 'athlete-cage.php';
 				}
 				if (box === "logout")
 				{
